@@ -1,4 +1,4 @@
-# Encryption
+# Ciphers
 
 ## Background
 ### Encyrption and Decryption
