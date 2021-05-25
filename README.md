@@ -55,7 +55,7 @@
 * A Vigenere Cipher that uses a longer key (instead of a keyword, a key phrase). An example of a key is an excerpt from a book.
 
 ## Project Overview
-* Implement the ciphers above using object-oriented programming (OOP). OOP is desired because of the natural inheritance hierarchy of the ciphers.
+* Implement the ciphers above using object-oriented programming (OOP). OOP is desired because of the natural inheritance hierarchy of the ciphers.<br>
 ![ScreenShot](/screenshots/inheritance.png)
 
 * The program will take allow a user to input a message they would like to encrypt in a .txt file and specify the type of cipher they would like to use for the encryption. Additional details regarding the encryption will also need to be the .txt input file (see "How to use" below).
@@ -70,7 +70,7 @@
 * Makefile
     * Makefile recipe. Creates a 'cipher' executable.
 * cipher.c, cipher.h
-    * Main class that all other cipher classes inherit from (Substitution cipher). Contains the encrypt and decrypt methods that the Caesar Cipher and ROT13 classes use. Uses the 'Cheshire smile' technique for data hiding. 
+    * Main class that all other cipher classes inherit from (Substitution cipher). Contains the encrypt and decrypt methods that the Caesar Cipher and ROT13 classes use. 
 * ccipher.cc, ccipher.h
     * Caesar Cipher class, inherits from Substitution Cipher and contains the rotate string method utilized in the ROT13 Cipher class.
 * rcipher.cc, rcipher.h
@@ -79,6 +79,9 @@
     * Running Key Cipher class. Inherits from Substitution Cipher.Contains encrypt and decrypt methods that utilize the tableau as well as a "book" member that allows for key words/key phrases.
 * vcipher.cc, vcipher.h
     * Vigenere Cipher class. Inherits from Running Key Cipher. The "book" member described above is utilized for a repeating keyword.
+
+## Implementation Details
+This program uses the "Cheshire smile" technique for data hiding. Because encryption is a sensitive topic (we may not want the client to see our implementation details), we can "hide" private data members by wrapping them in a protected struct. This allows us to implement the struct (and the rest of the class) in the source code, compile it, and then only provide a client with an API/libarary with the header in order to facilitate an interface. This way, the client won't actually know what's inside the class. In other words, they'll only know of the single pointer "smile", not what it points to.
 
 ## How to use
 1. Create an executable using the Makefile provided.
