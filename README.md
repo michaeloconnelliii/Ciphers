@@ -36,7 +36,7 @@
 #### Vigenere Cipher
 * "Polyalphabetic substitution cipher", but that's not very helpful for most readers. Let's use an example instead. We need a phrase to encrypt (as usual), a keyword, and a "tableau". Let's define "tableau" and then describe the algorithm.
 
-* A "tableau" is a 26 x 26 matrix where each row is a caesar cipher alphabet incrementally shifted. The first row has a shift of 0, the next has a shift of 1 and so on. 
+* A "tableau" is a 26 x 26 matrix where each row is a caesar cipher alphabet incrementally shifted. The first row has a shift of 0, the next has a shift of 1 and so on. <br>
 ![ScreenShot](/screenshots/tableau.png)
 
 1. Repeat the keyword above the text:
